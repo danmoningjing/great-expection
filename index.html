@@ -84,7 +84,7 @@ async function generate() {
 
   document.getElementById("result").innerText = "生成中...";
 
-  let res = await fetch("你的后端网址/generate", {
+  let res = await fetch("https://idonknow.onrender.com/generate")
     method: "POST",
     headers: {
       "Content-Type": "application/json"
