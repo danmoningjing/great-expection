@@ -1,24 +1,95 @@
-# 我的第一个 GitHub 项目
-
-我正在学习做项目 🚀
-
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>我的第一个网站</title>
+  <title>AI 文案工具</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f5f7fa;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .container {
+      background: white;
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 80%;
+      padding: 10px;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f0f0f0;
+      border-radius: 5px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>🚀 Hello World！</h1>
-  <p>这是我用 GitHub 做的第一个网站！</p>
 
-  <h2>功能</h2>
-  <ul>
-    <li>文案生成（未来）</li>
-    <li>AI工具（未来）</li>
-  </ul>
+  <div class="container">
+    <h1>🚀 AI 文案生成工具</h1>
+    <p>输入关键词，帮你生成简单文案（演示版）</p>
 
-  <p>敬请期待 😎</p>
+    <input id="input" placeholder="例如：减肥产品 / 咖啡店 / 学习英语">
+
+    <br>
+
+    <button onclick="generate()">生成文案</button>
+
+    <div class="result" id="result">
+      结果会显示在这里...
+    </div>
+  </div>
+
+  <script>
+    function generate() {
+      let text = document.getElementById("input").value;
+
+      if (!text) {
+        alert("请输入内容");
+        return;
+      }
+
+      let result = "🔥 爆款文案：\n\n";
+      result += "你还在为「" + text + "」烦恼吗？\n";
+      result += "现在有了更简单的方法，让你轻松搞定！\n";
+      result += "赶快试试吧！";
+
+      document.getElementById("result").innerText = result;
+    }
+  </script>
+
 </body>
 </html>
