@@ -74,22 +74,31 @@
   </div>
 
   <script>
-    function generate() {
-      let text = document.getElementById("input").value;
+async function generate() {
+  let text = document.getElementById("input").value;
 
-      if (!text) {
-        alert("请输入内容");
-        return;
-      }
+  if (!text) {
+    alert("请输入内容");
+    return;
+  }
 
-      let result = "🔥 爆款文案：\n\n";
-      result += "你还在为「" + text + "」烦恼吗？\n";
-      result += "现在有了更简单的方法，让你轻松搞定！\n";
-      result += "赶快试试吧！";
+  document.getElementById("result").innerText = "生成中...";
 
-      document.getElementById("result").innerText = result;
-    }
+  let res = await fetch("你的后端网址/generate", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ text: text })
+  });
+
+  let data = await res.json();
+
+  document.getElementById("result").innerText = data.result;
+}
   </script>
 
 </body>
 </html>
+
+
