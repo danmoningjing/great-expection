@@ -1,0 +1,24 @@
+# 我的第一个 GitHub 项目
+
+我正在学习做项目 🚀
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>我的第一个网站</title>
+</head>
+<body>
+  <h1>🚀 Hello World！</h1>
+  <p>这是我用 GitHub 做的第一个网站！</p>
+
+  <h2>功能</h2>
+  <ul>
+    <li>文案生成（未来）</li>
+    <li>AI工具（未来）</li>
+  </ul>
+
+  <p>敬请期待 😎</p>
+</body>
+</html>
